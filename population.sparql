@@ -1,0 +1,17 @@
+PREFIX dc:<http://purl.org/dc/elements/1.1/>
+PREFIX :<http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX owl:<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX sparql:<http://www.w3.org/2006/sparql-functions#>
+PREFIX fn:<http://www.w3.org/2005/xpath-functions/#>
+
+SELECT ?population_total ?population_unit
+WHERE
+{
+	?country :nameList "%s"@en . 
+	?country :populationTotal ?population_total .
+	?country :populationUnit ?population_unit .
+}
