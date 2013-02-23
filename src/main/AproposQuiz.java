@@ -5,15 +5,9 @@ import challenge.ChallengeGen;
 import challenge.BasicChallengeGen;
 import challenge.Entry;
 
-import com.hp.hpl.jena.query.*;
-import com.hp.hpl.jena.rdf.model.*;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.RandomAccessFile;
-import java.util.Vector;
-
 
 public class AproposQuiz 
 {
@@ -69,7 +63,7 @@ public class AproposQuiz
 
 	public static void main(String[] args) throws IOException
 	{
-		AproposQuiz quiz = new AproposQuiz();
+		new AproposQuiz();
 	}
 
 }

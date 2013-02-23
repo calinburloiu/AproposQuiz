@@ -22,7 +22,6 @@ public class QAGen_OfficialLanguage implements QAGen
 	
 	public String getOfficialLanguage(String country)
 	{
-		Vector<String> generalList = new Vector<String>();
 		String queryString = String.format(File2String.getString("officialLanguage.sparql"), country);
 		Query query = QueryFactory.create(queryString);
 		QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);

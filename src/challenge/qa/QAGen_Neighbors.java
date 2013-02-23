@@ -3,16 +3,6 @@ package challenge.qa;
 import java.util.Random;
 import java.util.Vector;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.Resource;
-
-import main.File2String;
 import main.SingletonCache;
 import main.SparqlQuerier;
 

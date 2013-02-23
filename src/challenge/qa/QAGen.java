@@ -1,7 +1,5 @@
 package challenge.qa;
 
-import java.util.Vector;
-
 public interface QAGen 
 {
 	/**

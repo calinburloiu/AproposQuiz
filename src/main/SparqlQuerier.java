@@ -10,7 +10,6 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.Resource;
 
 public class SparqlQuerier 
 {
@@ -45,7 +44,6 @@ public class SparqlQuerier
 	
 	public static int getPopulation(String country)
 	{
-		Vector<String> generalList = new Vector<String>();
 		String queryString = String.format(File2String.getString("population.sparql"), country);
 		Query query = QueryFactory.create(queryString);
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlQuerier.SESAME_SPARQL_ENDPOINT, query);

@@ -11,8 +11,6 @@ import java.util.Vector;
 
 import com.freebase.api.Freebase;
 import com.freebase.json.JSON;
-import com.hp.hpl.jena.query.*;
-import com.hp.hpl.jena.rdf.model.*;
 
 public class SingletonCache 
 {
@@ -95,7 +93,7 @@ public class SingletonCache
 		Vector<String> countries = getAllCountries();
 		Vector<String> randomCountries = new Vector<String>();
 		
-		TreeSet indexes = new TreeSet();
+		TreeSet<Integer> indexes = new TreeSet<Integer>();
 		Random random = new Random();
 		int randomIndex;
 		String country, randomNeighbor;

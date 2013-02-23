@@ -50,7 +50,6 @@ public class QAGen_PeopleBornIn implements QAGen {
 	
 	
 	public QA genQA(Object value) throws Exception {
-		int index;
 		String countryName = (String)value;
 		
 		// get the list of all the people born in the current country

@@ -15,7 +15,7 @@ import com.freebase.json.JSON;
 
 public class QAGen_EventsIn implements QAGen {
 
-Freebase freebase = Freebase.getFreebase();
+  Freebase freebase = Freebase.getFreebase();
 	
 	public String getSupportedKey() {
 		return "country";
