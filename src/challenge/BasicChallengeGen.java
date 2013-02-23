@@ -29,9 +29,9 @@ public class BasicChallengeGen implements ChallengeGen
 		
 		// `country` Q&A Generators
 		qaGenGroup = new Vector<QAGen>();
-		qaGenGroup.add(new QAGen_Population());
+//		qaGenGroup.add(new QAGen_Population());
 		//qaGenGroup.add(new QAGen_OfficialLanguage());
-		qaGenGroup.add(new QAGen_Neighbors());
+//		qaGenGroup.add(new QAGen_Neighbors());
 		qaGenGroup.add(new QAGen_PeopleBornIn());
 		qaGenGroup.add(new QAGen_PeopleDateOfBirth());
 		qaGenGroup.add(new QAGen_EventsIn());
@@ -94,6 +94,7 @@ public class BasicChallengeGen implements ChallengeGen
 				qa = qaGen.genQA(seedEntry.getValue());
 			}catch(Exception e)
 			{
+			  e.printStackTrace();
 				continue;
 			}
 			break;

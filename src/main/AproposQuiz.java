@@ -14,12 +14,6 @@ public class AproposQuiz
 	     
 	public AproposQuiz() throws IOException
 	{		
-//		if (SparqlQuerier.getRandomNeighbor("Niue") == null)
-//			System.out.println("Victory!");
-//		else
-//			System.out.println("Not victory!");
-//		System.exit(0);
-		
 		ChallengeGen challengeGen = new BasicChallengeGen();
 		Entry entry = new Entry("country", "Romania");
 		String aproposText = "";

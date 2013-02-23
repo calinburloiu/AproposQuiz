@@ -9,10 +9,10 @@ import main.SparqlQuerier;
 import challenge.Entry;
 
 public class QAGen_Neighbors implements QAGen{
-	final public int NR_OF_ANSWERS = 4;
+	public static final int NR_OF_ANSWERS = 4;
+	
 	@Override
 	public QA genQA(Object value) {
-		// TODO Auto-generated method stub
 		
 		String countryName = (String)value;
 		String question = "Which of the following is a neighbour of " + countryName + "?";
@@ -29,7 +29,7 @@ public class QAGen_Neighbors implements QAGen{
 		}*/
 		Vector<String> wrongAnswers = SingletonCache.getRandomCountries(NR_OF_ANSWERS - 1, countryName, true);
 		int wrong_index = 0;
-				
+		
 		for (int i = 0; i < NR_OF_ANSWERS; i++) {
 			if (i != correctAnswer) {
 				String answer = wrongAnswers.get(wrong_index);
@@ -57,7 +57,6 @@ public class QAGen_Neighbors implements QAGen{
 
 	@Override
 	public String getSupportedKey() {
-		// TODO Auto-generated method stub
 		return "hasBorderWith";
 	}
 	

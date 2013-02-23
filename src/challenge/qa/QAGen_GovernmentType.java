@@ -13,7 +13,8 @@ public class QAGen_GovernmentType implements QAGen
 	public QA genQA(Object value)
 	{
 		String countryName = (String)value;
-		String question = "Which of the following is the government type from " + countryName + "?";
+		String question = "Which of the following is the government type from " +
+		    countryName + "?";
 		Vector<String> answers = new Vector<String>();
 		Vector<Entry> aproposEntries = new Vector<Entry>();
 		int correctAnswer;
