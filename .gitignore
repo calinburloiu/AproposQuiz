@@ -3,6 +3,7 @@
 .metadata
 bin/**
 lib/**
+data/**
 tmp/**
 tmp/**/*
 *.tmp
