@@ -1,13 +1,13 @@
+PREFIX :<http://aims.fao.org/aos/geopolitical.owl#>
 PREFIX dc:<http://purl.org/dc/elements/1.1/>
-PREFIX :<http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dcterms:<http://purl.org/dc/terms/>
-select distinct ?country_name
-where {
-  ?country :nameList ?country_name.
+
+SELECT DISTINCT ?country_name
+WHERE {
+  ?country :nameListEN ?country_name.
   ?country a :self_governing
-  FILTER (LANG(?country_name) = 'en') .
 }

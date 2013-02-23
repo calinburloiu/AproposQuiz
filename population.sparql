@@ -1,5 +1,5 @@
+PREFIX :<http://aims.fao.org/aos/geopolitical.owl#>
 PREFIX dc:<http://purl.org/dc/elements/1.1/>
-PREFIX :<http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
@@ -11,7 +11,7 @@ PREFIX fn:<http://www.w3.org/2005/xpath-functions/#>
 SELECT ?population_total ?population_unit
 WHERE
 {
-	?country :nameList "%s"@en . 
+	?country :nameListEN "%s" . 
 	?country :populationTotal ?population_total .
 	?country :populationUnit ?population_unit .
 }

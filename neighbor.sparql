@@ -1,5 +1,5 @@
 PREFIX dc:<http://purl.org/dc/elements/1.1/>
-PREFIX :<http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/>
+PREFIX :<http://aims.fao.org/aos/geopolitical.owl#>
 PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX owl:<http://www.w3.org/2002/07/owl#>
@@ -11,9 +11,7 @@ PREFIX fn:<http://www.w3.org/2005/xpath-functions/#>
 SELECT ?country_name
 WHERE
 {
-	?input :nameList "%s"@en.
+	?input :nameListEN "%s" .
 	?input :hasBorderWith ?country .
-	?country :nameList ?country_name . 
-
-FILTER (LANG(?country_name) = 'en') .
+	?country :nameListEN ?country_name . 
 }

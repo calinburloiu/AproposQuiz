@@ -13,14 +13,16 @@ import com.hp.hpl.jena.rdf.model.Literal;
 
 public class SparqlQuerier 
 {
-	public static final String SESAME_SPARQL_ENDPOINT = "http://localhost/openrdf-workbench/repositories/quiz/query";
+	public static final String SPARQL_ENDPOINT =
+	    "http://localhost:3030/geopolitical/query";
 	
 	public static Vector<String> getGeneralList(String fileName, String varName)
 	{
 		Vector<String> generalList = new Vector<String>();
 		String queryString = File2String.getString(fileName);
 		Query query = QueryFactory.create(queryString);
-		QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlQuerier.SESAME_SPARQL_ENDPOINT, query);
+		QueryExecution qexec = QueryExecutionFactory.sparqlService(
+		    SparqlQuerier.SPARQL_ENDPOINT, query);
 		String var;
 
 		try {
@@ -46,7 +48,7 @@ public class SparqlQuerier
 	{
 		String queryString = String.format(File2String.getString("population.sparql"), country);
 		Query query = QueryFactory.create(queryString);
-		QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlQuerier.SESAME_SPARQL_ENDPOINT, query);
+		QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlQuerier.SPARQL_ENDPOINT, query);
 		Float populationTotal;
 		String populationUnit;
 		int population = 0;
@@ -82,7 +84,7 @@ public class SparqlQuerier
 		 String queryString = String.format(File2String.getString("neighbor.sparql"), countryName);
 		Query query = QueryFactory.create(queryString);
 		//System.out.println("QUERY: " + query);
-		QueryExecution qexec = QueryExecutionFactory.sparqlService(SESAME_SPARQL_ENDPOINT, query);
+		QueryExecution qexec = QueryExecutionFactory.sparqlService(SPARQL_ENDPOINT, query);
 		String var;
 
 		try {
