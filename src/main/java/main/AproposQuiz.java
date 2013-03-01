@@ -61,4 +61,8 @@ public class AproposQuiz
 		new AproposQuiz();
 	}
 
+        public static void test() {
+          System.out.println("test333");
+        }
+
 }
