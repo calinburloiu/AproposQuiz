@@ -1,7 +1,8 @@
-package main;
+package models.util;
 
 import java.util.Random;
 import java.util.Vector;
+
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -27,6 +28,7 @@ public class SparqlQuerier
 
 		try {
 			ResultSet results = qexec.execSelect();
+			System.out.println("*");
 			for (; results.hasNext();) {
 				QuerySolution soln = results.nextSolution();
 				Literal lit = soln.getLiteral(varName);

@@ -1,8 +1,9 @@
-package challenge.qa;
+package models.challenge.qa;
 
 import java.util.Vector;
 
-import challenge.Entry;
+import models.challenge.Entry;
+
 
 public class QAGen_GovernmentType implements QAGen
 {

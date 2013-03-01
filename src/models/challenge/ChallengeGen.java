@@ -1,4 +1,4 @@
-package challenge;
+package models.challenge;
 
 public interface ChallengeGen
 {

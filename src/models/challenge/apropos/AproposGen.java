@@ -1,4 +1,4 @@
-package challenge.apropos;
+package models.challenge.apropos;
 
 public interface AproposGen 
 {

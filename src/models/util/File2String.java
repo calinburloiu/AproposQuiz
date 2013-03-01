@@ -1,4 +1,4 @@
-package main;
+package models.util;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;

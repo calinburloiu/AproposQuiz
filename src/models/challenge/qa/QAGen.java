@@ -1,4 +1,4 @@
-package challenge.qa;
+package models.challenge.qa;
 
 public interface QAGen 
 {

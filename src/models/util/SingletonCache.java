@@ -1,4 +1,4 @@
-package main;
+package models.util;
 
 import static com.freebase.json.JSON.a;
 import static com.freebase.json.JSON.o;
@@ -8,6 +8,7 @@ import java.util.Random;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
+
 
 import com.freebase.api.Freebase;
 import com.freebase.json.JSON;
@@ -55,7 +56,12 @@ public class SingletonCache
 		for (String country : allCountries_freebase)
 			if (allCountries_geopolitical.contains(country))
 				allCountries.add(country);
-//		System.out.println(allCountries.size());
+		
+		for (String country: allCountries) {
+      System.out.print(country + ", ");
+    }
+    System.out.println();
+		System.out.println(allCountries.size());
 	}
 	
 //	public static void initAllCapitals()
@@ -71,6 +77,7 @@ public class SingletonCache
 	public static Vector<String> getAllCountries() {
 		if(allCountries == null)
 			initAllCountries();
+		
 		return allCountries;
 	}
 

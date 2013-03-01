@@ -1,7 +1,7 @@
-package challenge.apropos;
+package models.challenge.apropos;
 
-import main.SparqlQuerier;
-import challenge.Entry;
+import models.challenge.Entry;
+import models.util.SparqlQuerier;
 
 public class AproposGen_Neighbors implements AproposGen
 {

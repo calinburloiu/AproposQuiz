@@ -1,4 +1,4 @@
-package challenge.qa;
+package models.challenge.qa;
 
 import static com.freebase.json.JSON.a;
 import static com.freebase.json.JSON.o;
@@ -7,8 +7,10 @@ import java.util.Random;
 import java.util.TreeMap;
 import java.util.Vector;
 
-import main.SingletonCache;
-import challenge.Entry;
+import models.challenge.Entry;
+import models.util.SingletonCache;
+
+
 
 import com.freebase.api.Freebase;
 import com.freebase.json.JSON;

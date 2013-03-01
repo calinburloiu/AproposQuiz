@@ -1,12 +1,13 @@
-package challenge;
+package models.challenge;
 
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Vector;
 
-import challenge.qa.*;
+import models.challenge.apropos.*;
+import models.challenge.qa.*;
 
-import challenge.apropos.*;
+
 
 
 public class BasicChallengeGen implements ChallengeGen
@@ -29,9 +30,9 @@ public class BasicChallengeGen implements ChallengeGen
 		
 		// `country` Q&A Generators
 		qaGenGroup = new Vector<QAGen>();
-//		qaGenGroup.add(new QAGen_Population());
+		qaGenGroup.add(new QAGen_Population());
 		//qaGenGroup.add(new QAGen_OfficialLanguage());
-//		qaGenGroup.add(new QAGen_Neighbors());
+		qaGenGroup.add(new QAGen_Neighbors());
 		qaGenGroup.add(new QAGen_PeopleBornIn());
 		qaGenGroup.add(new QAGen_PeopleDateOfBirth());
 		qaGenGroup.add(new QAGen_EventsIn());
@@ -68,7 +69,7 @@ public class BasicChallengeGen implements ChallengeGen
 	
 	public Challenge genChallenge(Entry seedEntry)
 	{
-		Random rnd = new Random();
+		Random rnd = new Random(System.currentTimeMillis());
 //		String question = "";
 //		Vector<String> answers = new Vector<String>(4);
 //		Vector<Entry> aproposInputEntries = new Vector<Entry>(8);

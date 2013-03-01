@@ -1,8 +1,9 @@
-package challenge;
+package models.challenge;
 
 import java.util.Vector;
 
-import challenge.apropos.*;
+import models.challenge.apropos.*;
+
 
 
 public class Challenge 

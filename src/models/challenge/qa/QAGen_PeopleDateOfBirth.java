@@ -1,4 +1,4 @@
-package challenge.qa;
+package models.challenge.qa;
 
 import static com.freebase.json.JSON.a;
 import static com.freebase.json.JSON.o;
@@ -7,12 +7,14 @@ import java.util.Random;
 import java.util.TreeMap;
 import java.util.Vector;
 
-import main.SingletonCache;
+import models.challenge.Entry;
+import models.util.SingletonCache;
+
+
 
 import com.freebase.api.Freebase;
 import com.freebase.json.JSON;
 
-import challenge.Entry;
 
 public class QAGen_PeopleDateOfBirth implements QAGen {
 	Freebase freebase = Freebase.getFreebase();
@@ -72,6 +74,8 @@ public class QAGen_PeopleDateOfBirth implements QAGen {
 		
 		// get the list of all the people born in the current country
 		TreeMap<String, String> born_in = getPeopleBornHere(countryName);
+		if (born_in == null) throw new Exception("There are no people born in "
+		    + countryName + ".");
 		// pick a personality to be used in the question
 		Vector<String> answers = new Vector<String>();
 		Object[] people = born_in.keySet().toArray();

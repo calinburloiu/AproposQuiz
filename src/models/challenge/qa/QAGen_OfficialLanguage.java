@@ -1,8 +1,11 @@
-package challenge.qa;
+package models.challenge.qa;
 
 import java.util.Vector;
 
-import main.File2String;
+import models.challenge.Entry;
+import models.util.File2String;
+
+
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -12,7 +15,6 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.Literal;
 
-import challenge.Entry;
 
 public class QAGen_OfficialLanguage implements QAGen
 {

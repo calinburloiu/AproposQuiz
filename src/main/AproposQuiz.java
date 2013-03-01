@@ -1,13 +1,14 @@
 package main;
 
-import challenge.Challenge;
-import challenge.ChallengeGen;
-import challenge.BasicChallengeGen;
-import challenge.Entry;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+import models.challenge.BasicChallengeGen;
+import models.challenge.Challenge;
+import models.challenge.ChallengeGen;
+import models.challenge.Entry;
 
 public class AproposQuiz 
 {

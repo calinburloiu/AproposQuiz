@@ -1,11 +1,13 @@
-package challenge.apropos;
+package models.challenge.apropos;
 
 import java.util.Vector;
 
-import main.SingletonCache;
-import main.SparqlQuerier;
+import models.challenge.Entry;
+import models.util.SingletonCache;
+import models.util.SparqlQuerier;
 
-import challenge.Entry;
+
+
 
 public class AproposGen_ClosePopulation implements AproposGen
 {

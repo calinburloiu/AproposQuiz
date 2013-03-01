@@ -1,6 +1,6 @@
-package challenge.apropos;
+package models.challenge.apropos;
 
-import challenge.Entry;
+import models.challenge.Entry;
 
 public class AproposGen_SpokenLanguage implements AproposGen
 {
